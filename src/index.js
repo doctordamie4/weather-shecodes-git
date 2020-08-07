@@ -53,8 +53,8 @@ let temperature = Math.round(response.data.main.temp);
 let temperatureElement = document.querySelector("#grade");
 temperatureElement.innerHTML=`${temperature}°c`;
 let city = (response.data.name);
-let h2 = document.querySelector ("h2");
-h2.innerHTML = `${city}`;
+let h1 = document.querySelector ("h1");
+h1.innerHTML = `${city}`;
 let iconElement = document.querySelector("#icon");
 iconElement.setAttribute( 
   "src",
