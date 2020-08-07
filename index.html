@@ -15,7 +15,7 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/styles.css"/>
+    <link rel="stylesheet" href="src/week2.css" />
     <script
       src="https://kit.fontawesome.com/46c592e47c.js"
       crossorigin="anonymous"></script>
@@ -55,21 +55,31 @@
             />
             </div>
           </form>
-        
+          
           <hr />
-          <h1 class="current">
+          <h1 class="city">
+            <span id="place-city">Vancouver BC </span> 
+          </h1>
+          <h2 class="current">
             <span id= "today-date" June 27, 10:42pm></span>
             <br />
             <span class="temp">Day 19°⬆. Night 20°⬇</span>
 
             <br />
+            <div class="clearfix weather-temp">
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" id="icon"
+            class ="float-left"/>
+            <div class="float-left">
             <span class="degree">
-             <span id="grade">14</span>
+              
+             <span id="grade">14</span><span class="symbols">°C | °F </span> 
             </span>
+          </div>
+          </div>
             <br />
             <span class="feels"> Feels like </span>
             <span id= "feel-like"> 17°c</span>
-          </h1>
+          </h2>
           <br />
           <p>
           <div class="details">
@@ -85,17 +95,13 @@
           <p class="day">
             <span id= "today">
             <i class="fas fa-cloud-rain"></i>
-            <br />
+            <br/>
             sunday
           </span>
           <br/> 
-        
             <span id="description"> Light rain </span>
           </p>
           <hr />
-          <h2 class="city">
-           <span id="place-city">Vancouver BC </span> 
-          </h2>
           <div class="row">
             <div class="col">
               <div class="card mon" style="width: 5rem;">
@@ -150,9 +156,6 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div>
-            <a href="https://github.com/doctordamie4/weather-shecodes-git" target="blank"> Open Source Link,Coded by Nimah</a>
           </div>
         </div>
       </div>
