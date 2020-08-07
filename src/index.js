@@ -26,8 +26,6 @@ function handleSubmit(event) {
 place.innerHTML =`${searchInput.value}`;
 }
 
-search("Sydney");
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
@@ -56,7 +54,7 @@ h1.innerHTML = `${city}`;
 let iconElement = document.querySelector("#icon");
 iconElement.setAttribute( 
   "src",
-`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 
