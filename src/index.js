@@ -24,8 +24,8 @@ function handleSubmit(event) {
   event.preventDefault();
 
   let searchInput = document.querySelector ("#search-input");
-  let h1 = document.querySelector ("h1");
-  h1.innerHTML =`${searchInput.value}`;
+  let place = document.querySelector ("#place-city");
+place.innerHTML =`${searchInput.value}`;
 
 }
 
