@@ -32,7 +32,7 @@ function handleSubmit(event) {
 search("Sydney");
 
 let form =document.querySelector("#search-form");
-form.addEventListener("submit",handleSubmit);
+form.addEventListener("submit", handleSubmit);
 
 
 function showTemperature(response) {
