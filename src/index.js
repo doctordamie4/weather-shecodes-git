@@ -28,7 +28,7 @@ function handleSubmit(event) {
   
 }
 
-search ("Sydney");
+search("Sydney");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit",handleSubmit);
