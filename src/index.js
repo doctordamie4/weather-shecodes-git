@@ -13,20 +13,24 @@ let day= days[now.getDay()];
 todaydate.innerHTML= `${day}, ${hours}:${minutes}`;
 today.innerHTML = `${day}`;
 
-function unit(event) {
+function search(city) {
+  let apiKey = "1d4b68593b5ef58c6ebeb70b9aa9976d";
+  let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&units=metric&appid=${apiKey}`;
+}
+
+function handleSubmit(event) {
   event.preventDefault();
 
   let searchInput = document.querySelector ("#search-input");
   let h2 = document.querySelector ("h2");
   h2.innerHTML =`${searchInput.value}`;
   
-  let apiKey = "1d4b68593b5ef58c6ebeb70b9aa9976d";
-  let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&units=metric&appid=${apiKey}`;
+ 
   axios.get(`${apiUrl}`).then(showTemperature);
 
 }
 let form = document.querySelector("#search-form");
-form.addEventListener("submit",unit);
+form.addEventListener("submit",handleSubmit);
 
 
 function showTemperature(response) {
