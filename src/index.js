@@ -14,6 +14,7 @@ todaydate.innerHTML= `${day}, ${hours}:${minutes}`;
 today.innerHTML = `${day}`;
 
 function search(city) {
+  event.preventDefault();
   let apiKey = "1d4b68593b5ef58c6ebeb70b9aa9976d";
   let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&units=metric&appid=${apiKey}`;
   axios.get(`${apiUrl}`).then(showTemperature);
@@ -25,12 +26,12 @@ function handleSubmit(event) {
   let searchInput = document.querySelector ("#search-input");
   let h1 = document.querySelector ("h1");
   h1.innerHTML =`${searchInput.value}`;
-  
+  search(searchInput.value);
 }
 
 search("Sydney");
 
-let form = document.querySelector("#search-form");
+let form =document.querySelector("#search-form");
 form.addEventListener("submit",handleSubmit);
 
 
@@ -58,7 +59,7 @@ h1.innerHTML = `${city}`;
 let iconElement = document.querySelector("#icon");
 iconElement.setAttribute( 
   "src",
-`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 
