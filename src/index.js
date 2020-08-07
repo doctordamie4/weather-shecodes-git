@@ -13,7 +13,7 @@ let day= days[now.getDay()];
 todaydate.innerHTML= `${day}, ${hours}:${minutes}`;
 today.innerHTML = `${day}`;
 
-function search(city) {
+function search(event) {
   event.preventDefault();
   let apiKey = "1d4b68593b5ef58c6ebeb70b9aa9976d";
   let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&units=metric&appid=${apiKey}`;
@@ -26,12 +26,12 @@ function handleSubmit(event) {
   let searchInput = document.querySelector ("#search-input");
   let h1 = document.querySelector ("h1");
   h1.innerHTML =`${searchInput.value}`;
-  search(searchInput.value);
+
 }
 
 search("Sydney");
 
-let form =document.querySelector("#search-form");
+let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 
