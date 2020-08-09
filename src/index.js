@@ -34,6 +34,13 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 
+let fahrenheit = document.querySelector("#fahrenheit-temp");
+fahrenheit.addEventListener("click", displayFahrenheit);
+
+let celsius = document.querySelector("#celsius-temp");
+celsius.addEventListener("click", displayCelsius);
+
+
 function showTemperature(response) {
 
   let humid = Math.round(response.data.main.humidity);
@@ -77,3 +84,5 @@ function getCurrentPosition() {
 }
 let button = document.querySelector("#current-place");
 button.addEventListener("click", getCurrentPosition);
+
+search("Lagos");
