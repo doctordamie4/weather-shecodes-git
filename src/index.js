@@ -14,9 +14,13 @@ todaydate.innerHTML= `${day}, ${hours}:${minutes}`;
 today.innerHTML = `${day}`;
 
 function search(city) {
+  let searchInput = document.querySelector ("#search-input");
+  let place = document.querySelector ("#place-city");
+place.innerHTML =`${searchInput.value}`;
   let apiKey = "1d4b68593b5ef58c6ebeb70b9aa9976d";
   let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&units=metric&appid=${apiKey}`;
   axios.get(`${apiUrl}`).then(showTemperature);
+ 
 }
 
 function handleSubmit(event) {
