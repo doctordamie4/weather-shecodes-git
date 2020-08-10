@@ -63,7 +63,7 @@
 .day {
  position: relative;
  left: 350px;
- top :-32px;
+ bottom :50px;
 }
 .first {
  height: 200px;
