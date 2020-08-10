@@ -1,5 +1,11 @@
+.h5, h5 {
+  font-size: 13.5px;
+}
 .weather-forecast img{
-  width:42px;
+width:42px;
+}
+.weather-forecast {
+  font-size: 20px;
   }
   
 .col{
@@ -40,11 +46,18 @@
 
     position: relative;
     left: 250px;
-    bottom: 100px;
+    bottom: 45px;
+}
+.current.like{
+  position: relative;
+  bottom: -30px;
 }
 .feels {
   color: #fff;
   font-size: 13px;
+  position: relative;
+  bottom:-30px;
+  display: inline;
 }
 .city {
   font-size: 30px;
