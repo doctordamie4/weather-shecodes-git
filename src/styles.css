@@ -1,4 +1,7 @@
-
+.weather-forecast img{
+  width:42px;
+  }
+  
 .col{
   padding-bottom: 32px;
 }
