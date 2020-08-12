@@ -56,9 +56,10 @@ function formatDate(timestamp){
       let longitude = position.coords.longitude;
       let apiKey = "1d4b68593b5ef58c6ebeb70b9aa9976d";
       let apiUrl=`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
-    
-    
-      axios.get(`${apiUrl}`).then(showTemperature);
+    axios.get(`${apiUrl}`).then(showTemperature);
+
+    apiUrl=`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
+    axios.get(apiUrl).then(displayForecast);
     }
     
     function getCurrentPosition() {
