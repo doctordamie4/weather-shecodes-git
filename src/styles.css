@@ -146,3 +146,10 @@ width:42px;
   position: relative;
   bottom: 45px;
 }
+.weather-temp .active{
+  color:#555555;
+cursor:default;
+}
+.weather-temp .active:hover {
+  text-decoration:none;
+}

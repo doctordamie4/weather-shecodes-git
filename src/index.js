@@ -67,6 +67,7 @@ function formatDate(timestamp){
     let button = document.querySelector("#current-place");
     button.addEventListener("click", getCurrentPosition);
   
+
     function displayForecast(response) {
       let forecastElement = document.querySelector("#forecast");
       let  forecast = null;
@@ -106,12 +107,16 @@ function formatDate(timestamp){
   function displayFahrenheit(event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#grade");
+    celsius.classList.remove("active");
+    fahrenheit.classList.add("active");
     let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
     temperatureElement.innerHTML= Math.round(fahrenheitTemperature);
   }
   
   function displayCelsius(event) {
     event.preventDefault();
+    celsius.classList.add("active");
+    fahrenheit.classList.remove("active");
     let temperatureElement = document.querySelector("#grade");
     temperatureElement.innerHTML= Math.round(celsiusTemperature);
   }
